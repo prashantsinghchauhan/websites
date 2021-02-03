@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+   <title>
+      set timeinterval and set timeout
+    </title>
+  </head>
+    
+  <body>
+     <p id="counter">0</p>
+      <button onclick="clearInterval(mycounter)">stop counting</button>
+      <button onclick="clearInterval(alertmessage)">stop alertmessage</button>
+      
+      <script>
+          var counter = document.getElementById("counter");
+          
+          var x = 0;
+          
+          var mycounter = setInterval(function(){x++; counter.innerHTML = x},1000);
+          
+          var alertmessage = setTimeout(function(){window.alert("hello counter");},3000);
+      </script>
+  </body>
+  
+</html>

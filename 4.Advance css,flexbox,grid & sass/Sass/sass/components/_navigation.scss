@@ -1,0 +1,24 @@
+nav{
+    display: flex;
+    //hm variable ko value assign krke usko call kr sakte hai kahi bhi.
+    background-color: $color1;
+    a{
+        flex: 1;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 20px;
+        padding: 20px;
+        // "&" and sign lagake hm yeh bata re hai ki yeh link ka hi part hai agar apko nesting karni ho toh "&" lagaye kyunki agar app "a" lagane ki jarurat nahi.
+        &:hover{
+            background-color: #c93538;
+        }
+        &:active{
+            background-color: #798d20;
+        }
+        &.active{
+            color: #B314DB;
+            font-weight: bold;
+            font-size: 24px;
+        }
+    }
+}

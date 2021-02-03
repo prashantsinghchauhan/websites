@@ -1,0 +1,32 @@
+/*Let's make sure that the dimensions of any box includes its border and padding, this gives us an easy way of sizing our elements*/
+* {
+    box-sizing: border-box;
+}
+
+
+form{
+    font-size: 20px;
+    background-color: lightgoldenrodyellow;
+    padding: 20px;
+/*    declaring grid*/
+    display: grid;
+/*    work like margin properties*/
+    grid-gap: 5px;
+/*    if you define [label] like this then the value work for a particular element
+    if you declare value like this then value will apply particularly on the elements*/
+    grid-template-columns: [label] auto [input] 1fr;
+}
+form > label{
+/*    background-color: greenyellow;*/
+/*    you have to mention elemen here also which you declare in property */
+    grid-column: label;
+}
+form > input{
+    font-size: 1em;
+    grid-column: input;
+}
+/*if you want to select input directly you can declare its type then all input which have "submit" type they are selected*/
+form > input[type="submit"]{
+/*    through this submit button take 2 column space*/
+    grid-column: span 2;
+}

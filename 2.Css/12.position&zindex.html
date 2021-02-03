@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<!--static = the position is default .
+fixed= the position are fixed on web page 
+the element were visible even if you scroll down the web page or change the web page the position is fixed.
+relative= you can move image anywhere on the webpage using top right left bottom attributes.
+absolute= the element position is depend upon its parent element position(the parent elemnt should be non static).if there is no parent element then the position is fixed accordingly.
+-->
+<!--Z index=  z index work only with positioned elements , who are not static.
+ through z index you can definr stack order of element ex - in marrige there are plates who were organised normally without  number if you add number on that then they have ordered in  stack order and not mixed. -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>positioning and z index</title>
+      <style>
+    .c1{ 
+            background:#332599;   
+        color:snow; 
+        height: 75px; width: 300px;
+        font-size:200%;
+        position: fixed;
+        left: 30px;
+        top: 30px;
+        z-index: 1;
+        
+           }
+        .c2{ 
+            background:green;               color:white; font-size:200%;
+            height: 75px;
+            width: 400px;
+            position: fixed;
+            top: 30px;
+            left:30px;
+            z-index: 0;
+          }
+          .c3{ 
+              background: #560f0f;
+               color:ghostwhite; 
+              font-size:500%;
+              height: 90px;
+              width: 600px;
+              position: relative;
+              top: 30px;
+              left: 30px;
+              z-index: 1;
+/*              ctl+alt +k for color picker extension*/
+           }
+          .c4{
+              background-color: orangered;
+              color:black;
+              font-size: 100px;
+              height: 100px;
+              width:500px;
+              position:relative;
+              top:200px;
+              left: 30px;
+              
+          }
+          .c5{
+              background-color: orangered;
+              color:black;
+              font-size: 100px;
+              height: 100px;
+              width: 300px;
+              position: absolute;
+              left: 150px;
+              top: 20px;
+                
+          }
+        </style>
+    </head>
+    <body>  
+        <div class="c1">
+            <p>
+            Facebook is nice
+            </p>
+        </div>
+        <div class="c2">
+            <p> Twitter is great for politicains</p>
+
+        </div>
+        <div class="c3">
+            <p>Insta is trending </p>
+
+        </div>
+        <div class="c4"> <p> how are you</p>
+            <div class="c5"> ha ha </div>
+</div>
+            </body>
+   
+        
+</html>

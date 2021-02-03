@@ -1,0 +1,82 @@
+//nesting
+//sass: syntactically awesome style sheets
+// import attribute ka use krke file import kare, "_" aap jab bhi undescore  file ke namm ke agey lagayenge fir extensiom define karna jaruri nahi hai direct namm likhe toh bhi chalega.
+
+@import "utils/variables";
+@import "components/navigation";
+@import "base/base";
+
+
+//create a mixin
+//mixin ka syntax hai "@mixin nameofmixin(pass any variable with or without value "where the value is default value"){}" aap isme kisi bhi css atribute ki value assign karo then usko function ki traha use karo
+// @mixin h_transform($angle:-5deg) the value which is assign in the braces is the default value aap khali variable declare krke bhi chodd saktey hai.
+@mixin h_transform($angle:-5deg){
+    transform: rotate($angle);
+    -ms-transform: rotate($angle);//IE versions 9.0 and older
+    -moz-transform: rotate($angle);//mozilla firefox versions 3.5 and older
+    -webkit-transform: rotate($angle);//Chrome versions 4.0 and older
+}
+
+article{
+    div{
+        h3{
+            // hm variable kahi bhi bana sakte hai magar variable agar kahi kisi class ya heading ke andar ya curlybraces ke nadar ho toh usko global define krna jaruri hai nahi toh value assign nahi hogi.
+            //toh app kahi bhi andar variable assign kar re ho usko global assign jarur kare.
+//            $color3: red !global;
+            color: $color2;
+            font-size: 28px;
+        }
+        p{
+            color: $color3;
+            font-size: 20px;
+        }
+  }
+        div:nth-child(1){
+        h3:nth-child(1){
+            //mixin ko call krne ka tarika
+            @include h_transform();
+        }
+    }
+    div:nth-child(2){
+        h3:nth-child(1){
+            // mixin call kara and sath mai value bhi pass kardi ab default value ki jagha yeh kam karegi joh assign ki hai.
+            @include h_transform(-3deg);
+        }
+    }
+    
+}
+
+//hm button wide class buttons mai amendment ke liye use kar re hai ,humari inex.html file mai is namm ki koi class nahi hai.
+.button_wide{
+    // aapp ase bhi value assign kroge toh bhi compile krke "css" mai result percentage mai hi show hoga so sass ka yeh feature usefull hai
+    width: 300 / 800 * 100%;
+}
+// "%" aap percentage ka sign laga ke button ke liye ek tarike ka global class bana sakte ho joh compile hone ke badd apki "css" file mai show ni hoga
+//kyunki app ko value bar bar assign na karni pade isliye hm iska use krte hai.
+// syntax hai "%variablename" 
+// agar app "." dot laga kar class banate hai toh compile ke bad woh "css" file mai bhi show hoga jabki apki html file mai us namm se koi classs nahi hogi kyunki hm sass mai isko variable ki taraha use krte hai jiski ek bar value assign krne ke bad bar bar us kar sake toh % ka sign laga ke hi declare kare.
+%button_common{
+    color: white;
+    font-size: 20px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.btn-success{
+    //extend laga ke koi bhi class ki properties use kare joh apne apni "scss" mai banayi hai fir usko kitni bar bhi call kare.
+    // or usko ase call kare. @extend value; where value is userdefined.
+    @extend %button_common;
+    @extend .button_wide;
+    background-color: lawngreen;
+}
+.btn-warning{
+    @extend %button_common;
+    background-color: darkorange;
+}
+.btn-error{
+    @extend %button_common;
+    background-color: orangered;
+}

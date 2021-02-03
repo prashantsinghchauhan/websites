@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Drop down menu</title>
+
+    <!-- Bootstrap -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+ <div class="container-fluid">
+  
+   <button class="btn btn-primary" type="button" data-target="#mymodal" data-toggle="modal" data-ordernumber="112">
+   Contat us
+   </button>
+   <div class="modal fade" id="mymodal" role="dialog">
+    <div class="modal-dailog">
+    <div class="modal-content">
+    
+     <div class="modal-header">
+      
+     <h3 id="takingorder"> Thankyou for contact us:</h3>
+     <button class="close" data-dismiss="modal">
+      &times;
+      </button>
+ </div>
+     
+     <div class="modal-body">
+      <label for="inquiry">Your Inquiry:</label>
+      <textarea rows="5" class="form-control" id="inquiry"> </textarea>
+     
+     </div>
+     
+     <div class="modal-footer">
+     <button type="button" class="btn btn-default" data-dismiss="modal">
+      Close 
+      </button>
+      <button class="btn btn-primary" >
+      Send
+      </button>
+     </div>
+     </div>
+    </div>
+    </div>
+      </div>
+   
+   <script>
+   
+    $('#mymodal').on('show.bs.modal',function(event){
+     
+    var button = $(event.relatedTarget);
+     var order = button.data('ordernumber');
+     
+     $(this).find('#takingorder').text('Ordernumber :' + order);
+     
+    })
+    
+   </script>
+  </body>
+</html>

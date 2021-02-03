@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>
+    Select menu
+    </title>
+    <script 
+    src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/start/jquery-ui.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+</script>
+  <style>
+        .greenbox{
+            
+            background-color: aqua;
+            height: 150px;
+            width: 500px;
+           
+        }
+        
+      
+    </style>
+</head>
+<body>
+<div class="greenbox ui-corner-all" id="facebook">
+   <p>facebook</p> <br>
+     <label for="menu">City and locality</label>
+  <form>
+      <select id="select1" name="select1">
+    
+        <option selected="selected">
+            CITY
+        </option>
+       <optgroup label="Group-1" >
+           <option>
+               New delhi
+           </option>
+        <option>
+            Jaipur
+           </option>
+        <option>
+            Gurugram
+           </option>
+           
+           </optgroup>
+        <optgroup label="Group-2">
+        <option>
+            Noida
+            </option>
+        <option>
+            Greater noida
+            </option>
+            </optgroup>
+        
+    </select>
+      </form>
+   
+    
+</div>
+    
+    <script>
+    $(function(){
+       
+        $("#select1").selectmenu();
+        
+    });
+    
+    </script>
+    
+</body>
+</html>

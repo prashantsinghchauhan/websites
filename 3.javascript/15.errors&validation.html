@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Error & validation</title>
+    <style>
+        #error{
+            color: red;
+        }
+    </style>
+    </head>
+<body>
+    <p>
+        Your password should contain 6 letters,one capital letters and,one digit.
+    </p>
+    <p>
+        Password:<input id="password" type="password">
+    </p>
+    <p>
+        Re-enter Password:<input id="password2" type="password">
+    </p>
+    
+        <button onclick="check()" >
+            SUBMIT
+    </button>
+    <p id="error">
+    </p>
+    
+    <script>
+        function check(){
+            var password = document.getElementById("password").value;
+            var password2 = document.getElementById("password2").value;
+            var errormessage= document.getElementById("error");
+            var errortothrow = "";
+            
+            try{
+                if(password.length<6){
+                    errortothrow += "<br /> password too short";
+                }
+                if(/[A-Z]/g.test(password) == false){
+                    errortothrow += "<br /> password should have one capital letter.";
+                }
+                if(/\d/g.test(password) == false){
+                    errortothrow += "<br />  password should have one digit.";
+                }
+                if(password != password2){
+                    errortothrow += "<br /> password doesn't match."
+                }
+                throw errortothrow;
+            }
+             catch(err){
+                 errormessage.innerHTML= err;
+             }
+            
+        }
+    
+    </script>
+    
+    </body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+     Selecting html elements!
+        </title>
+       
+       <style>
+    .c1{ 
+            background:#332599;    color:snow; 
+        height: auto; width: 500px;
+        font-size:200%;
+           }
+        .c2{ 
+            background:green;                              height: auto;
+            width: auto;   
+           }
+          #drophere{ 
+              background: #560f0f;
+               color:ghostwhite; 
+              font-size:1em;
+              height: 400px; 
+              width: auto;
+/*              ctl+alt +k for color picker extension*/
+           }
+           li{
+               font-size: 2em;
+                text-align: center;
+           }
+           #list .ui-selecting{
+               
+               background: #d28383;
+             }
+           #list .ui-selected{
+               background: #de2f2f;
+               color: aliceblue;
+           }
+           
+          </style>
+         <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/eggplant/jquery-ui.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+        </script>
+
+    
+    </head>
+    <body>  
+        
+       
+        <div class="c1 ui-corner-all" id="facebook">
+            <p>
+            Facebook is nice
+            </p>
+        </div>
+        
+        <div class="c2 ui-corner-all" id="twitter">
+            <ul id="list">
+            <li class="ui-state-default">AUDI</li>
+            <li class="ui-state-default">BMW</li>
+            <li class="ui-state-default">TATA</li>
+            </ul>
+         
+        </div>
+        
+    <div class="ui-corner-all" id="drophere">
+            <p>
+                you can drop things here! 
+        </p>
+
+        </div>
+       
+         <script>    
+      
+             $(function(){
+            $("#list").selectable({
+                stop: function(){
+                    $(".ui-selected").each(function(){
+    $("<p></p>").text($(this).text()).appendTo("#drophere");
+                    })
+                }
+            });     
+                
+             });
+                 
+       
+            
+        </script>
+            </body>
+   
+        
+</html>

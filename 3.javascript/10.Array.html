@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Array</title>
+        </head>
+<body>
+    <p id="b1"></p>
+    <script>
+    // var arrr = new array();
+    var shoppinglist= ["bread","milk","butter"];
+     
+       
+        
+        function showresult(x){
+            document.getElementById("b1").innerHTML += "<br />" + x;
+        }
+        
+        showresult(shoppinglist[1]);
+        showresult(shoppinglist[2]);
+        delete shoppinglist[1];
+        showresult(shoppinglist);
+        shoppinglist [1]="yogurt";
+        showresult(shoppinglist);
+        shoppinglist.splice(1,1);
+        showresult(shoppinglist);
+        shoppinglist.splice(0,0,"yogurt","milk");
+        showresult(shoppinglist);
+
+ 
+      var mystring = "how are you";
+  //  var myarray = mystring.split('');
+     //    var myarray = mystring.split(' ');
+         var myarray = mystring.split(' ',2);
+        showresult(myarray);
+        
+    </script>
+    
+    
+    </body>
+    
+    
+    
+</html>

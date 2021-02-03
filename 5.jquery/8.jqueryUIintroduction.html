@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            jquery ui inroduction
+        </title>
+       
+       <style>
+    .c1{ 
+            background:#332599;    color:snow; 
+        height: auto; width: 500px;
+        font-size:200%;
+           }
+        .c2{ 
+            background:green;               color:white; font-size:200%;
+            height: auto;
+width: 500px;           }
+          .c3{ 
+              background: #560f0f;
+               color:ghostwhite; font-size:500%;
+              height: auto; width: 600px;
+/*              ctl+alt +k for color picker extension*/
+           }
+         
+          </style>
+         <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/eggplant/jquery-ui.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+        </script>
+
+    
+    </head>
+    <body>  
+        
+       
+        <div class="c1 ui-corner-all" id="facebook">
+            <p>
+            Facebook is nice
+            </p>
+        </div>
+        
+        <div class="c2 ui-corner-all" id="twitter">
+            <p> Twitter is great for politicains</p>
+
+        </div>
+        
+        <div class="c3 ui-corner-all" id="insta">
+            <p>Insta is trending </p>
+
+        </div>
+        <div class="ui-state-error ui-corner-all" style="height:100px; width: 500px; margin-top:20px">
+            <p>
+            Error message!
+            </p>
+        </div>
+        
+       <script>    
+        $(function(){
+        $("#facebook").draggable();
+            
+        }); 
+            
+        </script>
+            </body>
+   
+        
+</html>

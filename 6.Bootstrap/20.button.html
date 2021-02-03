@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      Alert
+    </title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   
+  </head>
+  <body>
+    <div class="container-fluid">
+     <button type="button" class="btn btn-primary" id="btn1" data-loading-text="loading...">
+       BUTTON 1
+      </button>
+      
+      <button type="button" class="btn btn-primary" id="btn2" data-loading-text="loading..." data-complete-text="Download complete!">
+       BUTTON 2
+      </button>
+      
+    </div>
+   <script>
+     
+   $(function(){
+     
+     $('#btn1').click(function(){
+       
+       $(this).button('loading').delay(1000).queue(function(){
+         
+         $(this).button('reset');
+         $(this).dequeue();
+       });
+       
+     });
+     
+      $('#btn2').click(function(){
+       
+       $(this).button('loading').delay(1000).queue(function(){
+         
+         $(this).button('complete');
+                
+
+         
+       });
+       
+     });
+     
+   })
+  
+    </script>
+        
+  </body>
+</html>

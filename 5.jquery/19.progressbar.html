@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Dialogs!</title>
+      <style>
+    .c1{ 
+        background:#332599; 
+        color:snow; 
+        height: 75px; width: 500px;
+        font-size:200%;
+           }
+        .c2{ 
+            background:green;        
+            color:white; 
+            font-size:200%;
+            height: 75px;
+             width: 500px;           }
+          .c3{ 
+              background: #560f0f;
+               color:ghostwhite; 
+              font-size:500%;
+              height: 90px;
+              width: 600px;
+              margin-bottom: 20px;
+/*              ctl+alt +k for color picker extension*/
+           }
+          #label{
+              position: absolute;
+              margin-left: 43%;
+              margin-top: 0.8%;
+          }
+          .list{
+              
+              height: auto;
+              width: auto;
+              background-color: beige;
+          }
+          .ui-menu{
+              
+		width: 120px;
+		
+	  }
+          </style>
+ <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/start/jquery-ui.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+        </script>
+        
+    </head>
+    <body>  
+       <div class="list ui-corner-all" >
+           <ul id="list1">
+           <li>
+               india
+               <ul>
+               <li>
+                New delhi
+                   </li>
+                   <li>
+                   Rajisthan
+                   </li>
+               </ul>
+               </li>
+               <li>africa</li>
+               <li>europe</li>
+           </ul>
+        </div>
+        
+        <div class="c1" id="facebook">
+            <p>
+            Facebook is nice
+            </p>
+        </div>
+        
+        <div class="c2" id="twitter">
+            <p> Twitter is great for politicains</p>
+
+        </div>
+        
+        <div class="c3" id="insta">
+            <p>Insta is trending </p>
+
+        </div>
+        <div id="progressbar">
+    <div id="label"></div>
+            
+        </div>
+        <button>Run</button>
+    <script>
+       $(function(){
+           $("#list1").menu();
+           
+$("#progressbar").progressbar({
+    value: 0
+});
+  var x =0;
+           $("button").button();
+           
+           $("button").click(function(){
+               $("#label").text("In progress...");
+               
+             setTimeout(function(){
+                  var progress = setInterval(function(){
+        x++;
+        $("#label").text(x + '%');
+    $("#progressbar").progressbar("option","value",x);
+        
+        if(x>99){
+            
+            clearInterval(progress);
+        }
+    },100);           
+   
+                 
+             },1000);  
+           });
+           
+       });
+        </script>
+            </body>
+   
+        
+</html>

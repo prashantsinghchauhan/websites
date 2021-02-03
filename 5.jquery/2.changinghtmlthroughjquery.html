@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Division & span</title>
+      <style>
+    .c1{ 
+        background:#332599;  
+        color:snow; 
+        height: 75px; 
+        width: 500px;
+        font-size: 200%;
+           }
+        .c2{ 
+            background: green;               color:white; font-size:200%;
+            height: auto;
+width: auto;           }
+          .c3{ 
+              background: #560f0f;
+               color:ghostwhite; 
+              font-size: 2em;
+              height: auto;
+              width: auto;
+/*              ctl+alt +k for color picker extension*/
+           }
+          #span1{
+              background-color: orangered;
+              color: black;
+              width: 500px;
+              font-size: 1.2em;
+          }
+        
+          </style>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
+    </head>
+    <body>  
+        <div class="c1">
+            <p>
+            Facebook is <span id="span1">nice</span> 
+            </p>
+            
+        </div>
+        <p id="p1">paragraph</p>
+        <div class="c2">
+            <p> Twitter is great for politicains</p>
+     <ul>
+    <li>BMW</li>
+    <li>MERCEDES</li>
+    <li>AUDI</li>
+            </ul>
+        </div>
+        <div class="c3">
+            <p>Insta is trending </p>
+            <table>
+            <tr><th>S.no</th><th>phone</th><th>model</th></tr>
+                <tr>
+                    <td>1</td>
+                    <td>Apple</td>
+                    <td>iphone</td>
+                <tr>
+                    <td>2</td>
+                    <td>samsung</td> <td>galaxy</td>
+                <tr>
+                    <td>3</td>
+                    <td>nokia</td>
+                    <td>sirocco</td>
+                <tr>
+                    <td>4</td>
+                    <td>Mi</td>
+                    <td>mi a2</td>
+                </tr>
+            
+            </table>
+<p>
+    Type tour name:
+    <input><button type="submit">Submit</button>
+            </p>
+        </div>
+        
+        
+        <script>
+            $("*").css("font-size","1em");
+      //  $("p").css("text-align","center");//to select or paragraph in html
+//    $("div > p").css("text-align","center");//to slect para in div.
+    $("div p").css("text-align","center");//to slect para in div.
+$("tr:even").css("background-color","#e1d446");//select even row in table
+            
+$("tr:odd").css("background-color","#811c90");//select odd row in table
+    $("p:first-child,p:last-child").css("text-decoration","underline");//slect parafirst row and last row
+    $("#p1").css("text-decoration","underline");//for selecting id or similarly class using dot "." infront. 
+            
+  $("li:first-child,li:last-child").css("background-color","#bbf362"); 
+
+     $("div:has(table)").css("background-color","rgba( 107, 180, 198, 0.697 )"); 
+    
+     $(":input").css("background-color","#1da492");       
+    $(":Submit").css("background-color","#7979eb"); 
+            
+        </script>
+       
+            </body>
+   
+        
+</html>

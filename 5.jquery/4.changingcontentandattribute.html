@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Changing content attribute.</title>
+      <style>
+    .d1{ 
+        background:#332599;  
+        color:snow; 
+        height: auto; 
+        width: 500px;
+        font-size: 200%;
+         }
+          #link{
+              color:coral;
+          }
+        .d2{ 
+            background: green;               color:white; font-size:200%;
+            height: auto;
+width: auto;           }
+          .d3{ 
+              background: #560f0f;
+               color:ghostwhite; 
+              font-size: 2em;
+              height: auto;
+              width: auto;
+/*              ctl+alt +k for color picker extension*/
+           }
+          #span1{
+              background-color: orangered;
+              color: black;
+              width: 500px;
+              font-size: 1.2em;
+          }
+        
+          </style>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
+    </head>
+    <body>  
+        
+        <button id="changefacebook">Change facebook</button>
+        <button id="changetwitter" >Change twitter</button>
+        <button id="appendtwitter" >Append twitter</button>
+        <button id="changeinput" >Input</button>
+        <button id="changelink" >Link Changing</button>
+        
+        <div class="d1" >
+            <p>
+            Facebook is <span id="span1">nice</span> 
+                 </p>
+            <a href="https://www.microsoft.com" title="Microsoft"  id="link" >Microsoft</a>
+        </div>
+       
+        <p id="p1">paragraph</p>
+        
+        <div class="d2">
+            <p> Twitter is great for politicains</p>
+    
+            
+        </div>
+       
+    <div class="d3">
+            <p>Insta is trending </p>
+            <p>
+    Type tour name:
+    <input id="input"><button id="submit" type="submit">Submit</button>
+            </p>
+        </div>
+         <script>
+        $(function(){
+            $("#changefacebook").click(function(){
+                
+                $(".d1").text(" changed");  
+            });       
+            
+            $("#changetwitter").click(function(){
+                
+                $(".d2").html("<p> html is changed</p>");  
+            });       
+
+            $("#changetwitter").click(function(){
+                
+                $(".d2").html("<p> html is changed</p>");  
+            });       
+            
+            $("#changeinput").click(function(){
+                
+                $("#input").val("hello prashant");  
+            });   
+            
+            $("#appendtwitter").click(function(){
+                
+//         $(".d2").append("apending succsessfull prashant");
+         $(".d2").prepend("prepend succsessfull prashant");
+                
+            });     
+            
+            $("#changelink").click(function(){
+                
+             $("#link").attr({"href":"https://www.google.com",  "title" : "Google"});
+            
+                 $("#link").text("Google");
+            
+                
+            });
+            
+            
+            
+             });
+             
+             
+        </script>
+       
+            </body>
+   
+        
+</html>

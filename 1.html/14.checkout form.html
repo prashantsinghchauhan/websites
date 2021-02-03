@@ -1,0 +1,67 @@
+<!DOCLTYPE HTM>
+<HTML>
+    <head>
+        <meta charset="utf-8">
+        <title>CHECKOUT FORM</title>
+    </head>
+    <body>
+        <form>
+            <label for="ADD">ADDRESS:</label>
+            <input type="text" name="address" placeholder="address" id="ADD" size="30px" maxlength="40" >
+            <br>
+            <label for="post">POSTCODE:</label>
+            <input type="text" name="postcode" placeholder="postcode" id="post" size="30px" maxlength="40" >
+            <br>
+            <label for="CITY">CITY:</label>
+            <input type="text" name="city" placeholder="city" id="CITY" size="30px" maxlength="40" >
+            <p>Choose your shipping method</p>
+            <select>
+                <option value="free shipping">FREE SHIPPING</option>
+                <option value="one day shiping">ONE DAY SHIPPING</option>
+                <option value="two day shipping">TWO DAY SHIPPING</option>
+            </select>
+            <!--  there is <select></select>this for drop down menu where there are elemnts
+<option>in this part you give the row names in drop down menu</option> option have attribute value which is helping us to linking in php-->
+            <p>Choose your payment method</p>
+          
+            <label>WALLETS
+                <input type="radio" name="payment" value="wallet">
+               <select> 
+     <option value="mobikiwik">mobikiwik</option>
+     <option value="paytm">paytm</option>
+     <option value="freerecharge">freerecharge</option>
+                    
+                  </select>
+               </label>&#160;&#160;&#160;
+            
+             <label>DEBIT CARD<input type="radio" name="payment"  value="debit card"></label>
+            <label>CREDIT CARDS<input type="radio" name="payment" value="credit card" ></label>
+            <br>
+<!--The <input type="radio"> defines a radio button.
+
+Radio buttons are normally presented in radio groups (a collection of radio buttons describing a set of related options). Only one radio button in a group can be selected at the same time.
+
+Note: The radio group must have share the same name (the value of the name attribute) to be treated as a group. Once the radio group is created, selecting any radio button in that group automatically deselects any other selected radio button in the same group. You can have as many radio groups on a page as you want, as long as each group has its own name.
+
+Note: The value attribute defines the unique value associated with each radio button. The value is not shown to the user, but is the value that is sent to the server on "submit" to identify which radio button that was selected.
+
+            -->
+                <label for="com">Comments:</label>
+            <textarea id="com" rows="4" cols="40" name="comments"  ></textarea>
+<!-- text area is use for comments which is given by user where syntax are as follow           -->
+            <br>
+            
+            <br>
+            <label>check for updates<input type="checkbox"></label><br>
+            <label>Save payment details<input type="checkbox"></label>
+            <br>
+            <br>
+            <input type="submit" value="submit">
+            <br>
+            <br>
+<!--ctrl + slash for comments.
+in the text decoration part they place text between tags eg:<em></em>.,
+-->
+           </form>
+    </body>
+</HTML>

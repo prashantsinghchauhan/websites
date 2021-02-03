@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset ="utf-8">
+    <title>
+      change html using variables
+    </title>
+    <style>
+      .bluebox{
+        background-color: #3A5795;
+		color: white;
+		height: 100px;
+		width:auto;
+	  }
+	  .yellowbox{
+		background-color: rgb(222, 224, 85);
+		height: 100px;
+		width: auto;
+	  }
+	  .greenbox{
+		background-color: #31af37;
+		height: 100px;
+		width: auto;
+	  }
+	  .great{
+		background-color: #5a3479;
+		
+	  }
+	</style>
+  </head>
+  
+  <body>
+    <div class="bluebox" id="facebook">
+      <p>
+        Facebook is 
+        <span class="great">
+          great
+        </span>
+        .
+      </p>
+      
+    </div>
+    <div class="yellowbox" id="apple">
+      <p>
+        Apple.
+      </p>
+      
+    </div>
+    <div class="greenbox" id="microsoft">
+      <p>
+        Microsoft.
+      </p>
+      
+    </div>
+    <button id="button1" onclick="swap('facebook','apple')">
+      Change facebook style.
+    </button>
+    <button id="button2" onclick="swap('apple','microsoft')">
+      Change apple style.
+    </button>
+    <script>
+     function swap(id1,id2){
+         var x=document.getElementById(id1).innerHTML;
+         var y=document.getElementById(id2).innerHTML;
+         document.getElementById(id1).innerHTML=y;
+         document.getElementById(id2).innerHTML=x;
+         
+     }
+        function function1(strfu){
+            window.alert("hello"+" "+ strfu );
+        }
+//        function1('prashant');/
+        
+        function function2(){
+            window.alert("hello");
+        }
+        
+//        function2();
+      
+      function function3(a,b)
+        {
+          return a+b;
+            
+        }
+        var z=function3(10,560);
+        window.alert(z);
+        
+      </script>
+      
+      
+  </body>
+  
+</html>

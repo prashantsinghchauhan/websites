@@ -1,0 +1,52 @@
+<!--1.alertmessage.html-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  
+    <title>
+      object constructors.
+    </title>
+  </head>
+  <body>
+    <p>
+      Javascript.
+    </p>
+    <script>
+       function phone(make,model,warranty,color){
+           this.make =make;
+           this.model =model;
+           this.warranty = warranty;
+           this.color =color;
+           this.extendwarranty= function (x){
+               this.warranty += x;
+           }
+           
+       }
+    var myphone = new phone("Apple","iphone5",12,"red");
+         
+        myphone.extendwarranty(12);
+        window.console.log(myphone);
+        myphone.condition="like new";
+        
+        window.console.log(myphone.condition);
+        
+    var myphone2= new phone();
+        myphone2.make= "samsung"
+        myphone2.model="galaxy";
+        myphone2.warranty= 12;
+        myphone2.color="black";
+        myphone2.price=54000;
+    
+        phone.prototype.condition = "new";
+        
+        window.console.log(myphone2.price+" "+ "galaxy");
+        window.console.log(myphone2.condition);
+        window.console.log(myphone2);
+
+        
+        
+      </script>
+  </body>
+  
+</html>

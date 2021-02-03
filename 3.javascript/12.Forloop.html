@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>For loop</title>
+        </head>
+<body>
+   <h1 id="f1">FOR loop</h1>
+   <h2 id="f2">FOR loop</h2>
+   <h3 id="f3">FOR loop</h3>
+   <h3 id="f4">FOR loop</h3>
+    
+    <script>
+    for(i=0;i<5;i++){
+      document.getElementById("f1").innerHTML += "<br/>" +  i;
+    } 
+      for(i=7;i>0;i--){
+      document.getElementById("f2").innerHTML += "<br/>" +  i;
+    }
+    //for loop using array
+       var shoppinglist= ["bread","butter","milk"];
+      
+     for(i=0;i<shoppinglist.length;i++){
+      
+        document.getElementById("f3").innerHTML += "<br />" + shoppinglist[i];
+       
+       
+     }
+       var shoppinglist2= [1,2,3];
+      for(i=0;i<shoppinglist2.length;i++){
+      shoppinglist2[i] += 10;
+        document.getElementById("f4").innerHTML += "<br />" + shoppinglist2[i];
+       
+       
+     }
+      
+    </script>
+    
+    
+    </body>
+    
+    
+    
+</html>

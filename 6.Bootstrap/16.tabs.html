@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      navs
+    </title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <ul class="nav nav-tabs nav-justified" id="mytabs">
+        <li role="presentation" class="active">
+          <a href="#home" data-toggle="tab">
+            <span class="glyphicon glyphicon-home">
+            </span>
+            Home
+          </a>
+        </li>
+        
+        <li role="presentation">
+          <a href="#messages" data-toggle="tab">
+            <span class="glyphicon glyphicon-envelope">
+            </span>
+            Messages 
+            <span class="badge">
+              3
+            </span>
+          </a>
+        </li>
+        
+        <li role="presentation">
+          <a href="#notification"  data-toggle="tab">
+            Notifications 
+            <span class="badge">
+              3
+            </span>
+          </a>
+        </li>
+        
+        <li role="presentation">
+          <a href="#contactus"  data-toggle="tab">
+            Contact us
+          </a>
+        </li>
+        
+      </ul>
+   
+      <div class="tab-content" id="tabcontent">
+      <div class="tab-pane active fade " id="home">
+        <p> Some Text</p>
+        <p> Some Text</p>
+        <p> Some Text</p>
+        <p> Some Text</p>
+        <p> Some Text</p>
+        <p> Some Text</p>
+        <p> Some Text</p>
+        <p> Some Text</p>
+        <p> Some Text</p>
+        </div>
+       <div class="tab-pane fade" id="messages">
+        <p> Some Text</p>
+        <p> Some Text</p>
+        <p> Some Text</p>
+        <p> Some Text</p>
+        <p> Some Text</p>
+        <p> Some Text</p>
+        <p> Some Text</p>
+        <p> Some Text</p>
+        <p> Some Text</p>
+        </div>
+       <div class="tab-pane fade" id="notification">
+        <p> Some Text</p>
+        <p> Some Text</p>
+        <p> Some Text</p>
+        <p> Some Text</p>
+        <p> Some Text</p>
+        <p> Some Text</p>
+        <p> Some Text</p>
+        <p> Some Text</p>
+        <p> Some Text</p>
+        </div>
+       <div class="tab-pane fade" id="contactus">
+        <p> Some Text</p>
+        <p> Some Text</p>
+        <p> Some Text</p>
+        <p> Some Text</p>
+        <p> Some Text</p>
+        <p> Some Text</p>
+        <p> Some Text</p>
+        <p> Some Text</p>
+        <p> Some Text</p>
+        </div>
+      
+      
+      </div>
+   
+    </div>
+   <script>
+    $('#mytabs a:last').tab('show');
+     
+     $('a[data-toggle="tab"]').on('shown.bs.tab',function(event){
+       
+       window.alert(' The active tab: ' + $(event.target).text() + ' The previous tab: ' + $(event.relatedTarget).text());
+     });
+    
+    </script>
+  </body>
+</html>

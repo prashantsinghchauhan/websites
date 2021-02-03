@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+        buttons
+        </title>
+       
+       <style>
+    .c1{ 
+         background:#332599;    
+        color:snow; 
+        height: auto;
+        width: auto;
+        font-size:200%;
+           }
+        .c2{ 
+            background:green;           
+            color:white; 
+            font-size:200%;
+            height: auto;
+           width: auto;
+           }
+        .c3{ 
+            background: #6d2626;         
+            color:white; 
+            font-size:200%;
+            height: auto;
+           width: auto;
+           }
+         
+         
+          </style>
+         <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/eggplant/jquery-ui.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+        </script>
+
+    
+    </head>
+    <body>  
+        
+       
+        <div class="c1 ui-corner-all" id="facebook">
+            <p>
+            Checkboxes and there sets
+            </p>
+            <div id="set">
+        <input type="checkbox" id="checkbox1">
+                <label for="checkbox1">BMW</label>
+                <input type="checkbox" id="checkbox2">
+                <label for="checkbox2">AUDI</label>
+                <input type="checkbox" id="checkbox3">
+                <label for="checkbox3">FERAARI</label>
+            </div>
+             <input type="checkbox" id="checkbox4">
+                <label for="checkbox4">Single checkbox</label>
+        </div>
+        
+        <div class="c2 ui-corner-all" id="twitter">
+            <p> Radio buttons</p>
+         <div id="radio">
+             <input type="radio" id="radio1" name="radioBoxes">
+             <label for="radio1">TATA</label>
+              <input type="radio" id="radio2" name="radioBoxes" >
+             <label for="radio2">TATA</label> 
+            <input type="radio" id="radio3" name="radioBoxes">
+             <label for="radio3">TATA</label>      </div>
+        
+    <div class="c3 ui-corner-all" id="droppable">
+            <p>
+        buttons
+        </p>
+
+        </div>
+        <button id="button1">Button</button>
+        <button id="button2">Button</button>
+        <button id="button3">Button</button>
+       
+         <script>    
+      
+             $(function(){
+            
+                 $("#button1").button();
+                 $("#button2").button({
+                     
+                     icons: {
+                         primary:"ui-icon-folder-collapsed" 
+                     },
+                     text:false
+                 });
+                 $("#button3").button({
+                     
+                     icons: {
+                         
+                     primary: "ui-icon-mail-closed" ,  
+                     secondary: "ui-icon-arrowreturn-1-e"
+                         
+                     }
+                         
+                 });
+                 
+                 $("#set").buttonset();
+                 $("#checkbox4").button();
+                 $("#radio").buttonset();
+        }); 
+            
+        </script>
+            </body>
+   
+        
+</html>

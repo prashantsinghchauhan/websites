@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Dialogs!</title>
+      <style>
+    .c1{ 
+        background:#332599; 
+        color:snow; 
+        height: 75px; width: 500px;
+        font-size:200%;
+           }
+        .c2{ 
+            background:green;        
+            color:white; 
+            font-size:200%;
+            height: 75px;
+             width: 500px;           }
+          .c3{ 
+              background: #560f0f;
+               color:ghostwhite; font-size:500%;
+              height: 90px; width: 600px;
+/*              ctl+alt +k for color picker extension*/
+           }
+         
+          </style>
+ <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/eggplant/jquery-ui.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+        </script>
+        
+    </head>
+    <body>  
+       
+        
+        <div class="c1" id="facebook">
+            <p>
+            Facebook is nice
+            </p>
+        </div>
+        
+        <div class="c2" id="twitter">
+            <p> Twitter is great for politicains</p>
+
+        </div>
+        
+        <div class="c3" id="insta">
+            <p>Insta is trending </p>
+
+        </div>
+        <div id="mydialog" title="every thing is fine!">
+            <p>This is a Dialog! box</p>
+        </div>
+         <div id="confirmation" title="leave this page!">
+            <p><span class="ui-icon ui-icon-alert"></span>DANGER!</p>
+        </div>
+         <button id="open"> 
+             Open Dialog.  
+        </button>
+        <button id="goToPreviousPage"> 
+            Go to previous page. 
+        </button>   
+        
+    <script>
+       $(function(){
+           
+//           $("#mydialog").dialog();
+           $("#mydialog").dialog({
+               autoOpen:false
+           });
+           $("#open").click(function(){
+               
+               $("#mydialog").dialog("open");
+               
+           });
+            $("#confirmation").dialog({
+               autoOpen:false,
+                modal:true,
+                buttons:{
+                    "GO to previous page":function(){
+                        window.history.back();
+                    }
+                    ,
+                    Cancel:function(){
+                        $(this).dialog("close");
+                    }
+                }
+           });
+            $("#goToPreviousPage").click(function(){
+               
+               $("#confirmation").dialog("open");
+               
+           });
+           
+           
+       });
+        </script>
+            </body>
+   
+        
+</html>

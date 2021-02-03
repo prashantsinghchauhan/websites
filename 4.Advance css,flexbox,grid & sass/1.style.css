@@ -1,0 +1,59 @@
+/*Let's make sure that the dimensions of any box includes its border and padding, this gives us an easy way of sizing our elements*/
+/*through this every div got border*/
+* {
+      box-sizing: border-box;   
+}
+
+/*styling the container*/
+
+.container{
+     background-color: aqua;
+    height: 200px;
+     margin: 10px;
+/* through this flex is inherit in css*/
+    display: flex;
+/* through this you can wrap the element in three styles ,wrap,nowrap, wrap-reverse if you cannot apply this the elements does not behave responive*/
+   flex-wrap: wrap;
+/* through this they you decide what kind of wraping you  want and in which direction*/
+/*  flex-direction: column;*/
+ flex-direction: row;
+/* justify-content: flex-start;*/
+/* if you cannot assign value then item get their reqired space*/
+/* align-items: center;*/
+/* align-content: space-around;*/
+ 
+ 
+}
+
+/*accesing div inside the container*/
+
+.container > div{
+ 
+ background-color: aquamarine;
+ color: #5073dc;
+ padding: 20px;
+ text-align: center;
+ margin: 1px;
+ border: 5px #e9e32f solid;
+/* through flex-basis you can fix standarize the height and width attribute*/
+/* flex-basis: 100px;*/
+/* through felx-grow you can  control their parrallel growing and they fill up the screeen space as well */
+/* flex-grow: 1;*/
+/*flex-shrink: 1;*/
+/* you can define grow shrink basis in single line
+    grow can be assign in % or in number
+    basis can be assign in % or in px
+    where shrink is only assign in number*/
+flex: 10% 1 100px;
+    
+ 
+}
+/*the element a and d were grow 20 % faster than others*/
+/*
+#a{
+  flex: 20% 
+}
+
+#d{
+    flex: 20%
+}*/

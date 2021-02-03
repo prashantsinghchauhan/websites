@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jquery effects</title>
+      <style>
+    .c1{ 
+            background:#332599;    color:snow; 
+        height: 75px; width: 500px;
+        font-size:200%;
+           }
+        .c2{ 
+            background:green;               color:white; font-size:200%;
+            height: 75px;
+width: 500px;           }
+          .c3{ 
+              background: #560f0f;
+               color:ghostwhite; font-size:500%;
+              height: 90px; width: 600px;
+/*              ctl+alt +k for color picker extension*/
+           }
+         
+          </style>
+ <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>  
+        <button id="fadeout">fadeout</button>
+        <button id="fadein">fade in</button>
+        <button id="fadetoggle">fade toggle</button>
+        <button id="animatefacebook">Animate face</button>
+        
+        <div class="c1" id="facebook">
+            <p>
+            Facebook is nice
+            </p>
+        </div>
+        
+        <div class="c2" id="twitter">
+            <p> Twitter is great for politicains</p>
+
+        </div>
+        
+        <div class="c3" id="insta">
+            <p>Insta is trending </p>
+
+        </div>
+        
+    <script>
+       
+        $(function(){
+    $("#fadeout").click(function(){
+                
+    $("#facebook").fadeOut(3000,function(){
+        window.alert("hi!");
+    });                        
+                
+            });
+            
+     $("#fadein").click(function(){
+                
+    $("#facebook").fadeIn();                       
+                
+            });
+            
+            $("#fadetoggle").click(function(){
+                
+                $("#facebook").fadeToggle(1000);
+                $("#twitter").fadeToggle(2000);
+                $("#insta").fadeToggle(3000);
+            });
+//            
+//            $("#animatefacebook").click(function(){
+//               $("#facebook").animate({"height":'300px',"width":'300px',"opacity":'0.5'},2000); 
+//            });
+            
+                $("#animatefacebook").click(function(){
+                                        
+                    $("#facebook").animate({"width":'300px'},2000);
+                    $("#facebook").animate({"height":'300px'},2000);
+                    $("#facebook").animate({"height":'200px'},"slow");
+                    $("#facebook").delay(3000).animate({"width":'300px'});
+                                            });
+            
+            });
+        </script>
+            </body>
+   
+        
+</html>

@@ -1,0 +1,61 @@
+<!DOCKTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>change html style</title>
+    
+     <style>
+      .bluebox{
+        background-color: #3A5795;
+		color: white;
+		height: 100px;
+		width:auto;
+	  }
+	  .yellowbox{
+		background-color: rgb(222, 224, 85);
+		height: 100px;
+		width: auto;
+	  }
+	
+	 
+	</style>
+    </head>
+<body>
+     <div class="bluebox" id="facebook">
+      <p>
+        Facebook id great.
+      </p>
+      
+    </div>
+    <div class="yellowbox" id="apple">
+      <p>
+        Apple.
+      </p>
+         </div>
+	<button id="f1">change facebook style</button>
+	<button id="a1">change Apple style</button>
+	<script>
+		
+       var color = 'rgb(15,256,890)';
+        /* out put rgb value in single quote   */
+        document.getElementById("f1").onclick=function(){
+			document.getElementById("facebook").style.backgroundColor= color;
+		}
+        var x,y,z,chngcolor;
+        
+        document.getElementById("a1").onclick = function(){
+         x= Math.round(Math.random()*99);
+        y= Math.round(Math.random()*99);
+        z= Math.round(Math.random()*99);
+        chngcolor='rgb('+x+','+y+','+z+')';
+ document.getElementById("apple").style.backgroundColor = chngcolor;
+            
+ document.getElementById("apple").innerHTML = "chngcolor" +
+     '<p>' + chngcolor + '</p>';
+         
+        }
+	
+	</script>
+    
+    </body>
+</html>

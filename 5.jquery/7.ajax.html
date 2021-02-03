@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jquery effects</title>
+      <style>
+    .c1{ 
+            background:#332599;    color:snow; 
+        height: auto; width: 500px;
+        font-size:200%;
+           }
+        .c2{ 
+            background:green;               color:white; font-size:200%;
+            height: auto;
+width: 500px;           }
+          .c3{ 
+              background: #560f0f;
+               color:ghostwhite; font-size:500%;
+              height: auto; width: 600px;
+/*              ctl+alt +k for color picker extension*/
+           }
+         
+          </style>
+ <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>  
+        <button id="ajax">load ajax</button>
+       
+        <div class="c1" id="facebook">
+            <p>
+            Facebook is nice
+            </p>
+        </div>
+        
+        <div class="c2" id="twitter">
+            <p> Twitter is great for politicains</p>
+
+        </div>
+        
+        <div class="c3" id="insta">
+            <p>Insta is trending </p>
+
+        </div>
+        
+    <script>
+       
+        $(function(){
+   $("#facebook").load("ajax/somedata.txt");
+   $("#twitter").load("ajax/somedata.txt #paragraph2");
+            
+            
+//            $("#ajax").click(function(){
+//                
+//    $.ajax({url:"ajax/somedata.txt",success: function(data){
+//                    $("#twitter").html(data);
+//                }});
+//            });
+            $("#ajax").click(function(){
+                
+$.ajax({url: "ajax/somedata.txt" }).done(function(data){
+    
+                    $("#insta").html(data);
+            });
+            
+            }); 
+            }); 
+            
+        </script>
+            </body>
+   
+        
+</html>

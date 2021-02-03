@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      Alert
+    </title>
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+ 
+  </head>
+  <body>
+    <div class="container-fluid">
+     <a class="btn btn-primary" href="#coll1" data-toggle="collapse">
+       link
+      </a>
+      
+      <button type="button" class="btn btn-primary" data-target="#coll2" data-toggle="collapse" >
+       BUTTON
+      </button>
+      <div id="coll1" class="bg-danger collapse">
+        <p>collapsable content</p>
+        <p>collapsable content</p>
+        <p>collapsable content</p>
+        </div>
+     <div id="coll2" class="bg-danger collapse">
+        <p>collapsable content</p>
+        <p>collapsable content</p>
+        <p>collapsable content</p>
+        </div>
+     <br>
+     <br>
+     
+     <div id="accordion" class="panel-group" >
+      <div class="panel panel-warning">
+       <div class="panel-heading">
+       
+       <h4 class="panel-title">
+        <a href="#collapse" data-toggle="collapse" data-parent="#accordion">
+         Section
+        </a>
+        </h4>       
+       </div>
+      
+       <div class="panel-collapse collapse in" id="collapse">
+       <div class="panel-body">
+        
+         <p>collapsable content</p>
+        <p>collapsable content</p>
+        <p>collapsable content</p>
+        
+        </div>
+       </div>
+      </div>
+      
+      <div class="panel panel-danger">
+       <div class="panel-heading">
+       
+       <h4 class="panel-title">
+        <a href="#collapse1" data-toggle="collapse" data-parent="#accordion">
+         Section 2
+        </a>
+        </h4>       
+       </div>
+      
+       <div class="panel-collapse collapse in" id="collapse1">
+       <div class="panel-body">
+        
+         <p>collapsable content</p>
+        <p>collapsable content</p>
+        <p>collapsable content</p>
+        
+        </div>
+       </div>
+      </div>
+     
+      <div class="panel panel-success">
+       <div class="panel-heading">
+       
+       <h4 class="panel-title">
+        <a href="#collapse2" data-toggle="collapse" data-parent="#accordion">
+         Section 3
+        </a>
+        </h4>       
+       </div>
+      
+       <div class="panel-collapse collapse in" id="collapse2">
+       <div class="panel-body">
+        
+         <p>collapsable content</p>
+        <p>collapsable content</p>
+        <p>collapsable content</p>
+        
+        </div>
+       </div>
+      </div>
+     
+     
+     
+     </div>
+     
+        
+    </div>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   
+   <script>
+  $(function(){
+   $('#collapse1').collapse('show');
+   $('#collapse2').collapse('toggle'); 
+    
+      $('#collapse').on('hidden.bs.collapse',function(){
+        window.alert('Section 1 hidden!');
+      }
+                        );
+    
+   
+  }) 
+    </script>
+        
+  </body>
+</html>

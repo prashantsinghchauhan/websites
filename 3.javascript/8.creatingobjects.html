@@ -1,0 +1,42 @@
+<!--1.alertmessage.html-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  
+    <title>
+      creating objects.
+    </title>
+  </head>
+  <body>
+    <p>
+      Javascript.
+    </p>
+    <script>
+      var myphone = {
+          make :"nokia",
+          color :"black",
+          warranty:"12",
+          model :"sirocoo"
+          
+      };
+      
+      window.console.log(myphone);
+      window.console.log(myphone.color);
+      window.console.log(myphone.make);
+      window.console.log(myphone.warranty);
+      window.console.log(myphone.model);
+     
+      var myotherphn =myphone;
+/* through this the other object have all the property of another and you chng any thing to any they affect on both side */
+      
+            
+ var myPhone2 = new Object(); 
+      myPhone2.make = "Samsung";       myPhone2.model = "Galaxy S4";       myPhone2.warranty = 12;       myPhone2.color = "black";       window.console.log(myPhone2);       myPhone2.warranty = 0;       window.console.log(myPhone2);   
+        
+        myotherphn.make="mi";
+      window.console.log(myotherphn);
+      </script>
+  </body>
+  
+</html>

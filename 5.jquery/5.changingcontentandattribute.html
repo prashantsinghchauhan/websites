@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cahnging html and attribute.</title>
+      <style>
+    .d1{ 
+        background:#332599;  
+        color:snow; 
+        height: auto; 
+        width: 500px;
+        font-size: 200%;
+         }
+          #link{
+              color:coral;
+          }
+        .d2{ 
+            background: green;               color:white; font-size:200%;
+            height: auto;
+width: auto;           }
+          .d3{ 
+              background: #560f0f;
+               color:ghostwhite; 
+              font-size: 2em;
+              height: auto;
+              width: auto;
+/*              ctl+alt +k for color picker extension*/
+           }
+          .span1{
+              background-color: orangered;
+              color: black;
+              width: 500px;
+              font-size: 1.2em;
+          }
+           .sans-serif{ 
+               font-family: sans-serif;   
+          }   
+        
+          </style>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
+    </head>
+    <body>  
+        
+        <button id="changefacebook">Change facebook</button>
+        
+        <button id="changeinsta" >Change Insta</button>
+        <button id="changeinput" >Input</button>
+        <button id="changelink" >Link Changing</button>
+        <button id="showfacebook" >Show Facebook</button>
+        <button id="changegreat" >Wrap</button>
+      
+        
+        <div class="d1" >
+            <p>
+            Facebook is
+        <span class="span1" id="great">nice</span> 
+                 </p>
+            <a href="https://www.microsoft.com" title="Microsoft"  id="link" >Microsoft</a>
+        </div>
+       
+        <p id="p1">paragraph</p>
+        
+        <div class="d2 sans-serif"> 
+<!--            in classs nameing we can use font-family function or directly call this fuction in csss for amentment-->
+            <p> Twitter is great for politicains</p>
+    
+            
+        </div>
+       
+    <div class="d3" id="greenbox">
+            <p>Insta is trending </p>
+            <p>
+    Type tour name:
+    <input id="input"><button id="submit" type="submit">Submit</button>
+            </p>
+        </div>
+        <button id="changetwitter" >Change twitter</button>
+         <script>
+        $(function(){
+        $("#changefacebook").click(function(){
+           
+            $(".d1").css("width",100*Math.random()-50 + $(".d1").width());
+            
+            $(".d1").addClass("d2");
+            
+//            window.alert($(".d1").innerHeight()+ "innerheight");//shows innerheight
+//            window.alert($(".d1").outerHeight() + "outerheight");//shows outer height
+            
+            
+        });
+            $("#changetwitter").click(function(){
+         
+                $(".d2").removeClass("sans-serif");  
+                $(".d2").css("position","absolute");
+
+                $(".d2").css({"top":200*Math.random(),"left":200*Math.random(),"background-color":'rgba( '+ Math.floor(256*Math.random())+','+ Math.floor(256*Math.random()) +','+ Math.floor(256*Math.random()) +' )'});
+                
+         });
+    $("#changeinsta").click( function(){ 
+         
+        $("#greenbox").toggleClass("d3");//for class deletion
+        
+    }); 
+            $(".d1").click( function(){ 
+      
+                $(this).hide();
+    });                                          
+           
+      $("#showfacebook").click(function(){  
+          $(".d1").show();
+                                         });
+      
+            $("#changegreat").click(function(){   
+                $("#great").wrap("<div></div>");
+                                         });
+            
+            
+            
+                
+             
+             
+             });
+             
+             
+        </script>
+       
+            </body>
+   
+        
+</html>

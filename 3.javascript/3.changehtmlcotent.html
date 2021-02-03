@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>change html content</title>
+      <style>
+    .c1{ 
+            background:#332599;    color:snow; 
+        height: 75px; width: 500px;
+        font-size:200%;
+           }
+        .c2{ 
+            background:green;               color:white; font-size:200%;
+            height: 75px;
+width: 500px;           }
+          
+          </style>
+        
+    </head>
+    <body>  
+        <div class="c1" id="f1">
+            <p>
+            Facebook is nice
+            </p>
+        </div>
+        <div class="c2" id="t1">
+            <p> Twitter is great for politicains</p>
+
+        </div>
+        <button id="facebook">change facebook content</button>
+        <button id="twitter">change twitter content</button>
+        
+        <script>
+
+document.getElementById("facebook").onclick=function(){
+ document.getElementById("f1").innerHTML="<h1>facebook java </h1>";
+            }
+document.getElementById("twitter").ondblclick=function(){
+ document.getElementById("t1").innerHTML="<ul><li>hello</li><li>the content is changed by using java script.</li></ul>";
+            }
+        </script>
+        
+            </body>
+   
+        
+</html>
